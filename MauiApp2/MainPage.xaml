@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="#f0f4f8"
+             BackgroundImageSource="C:\Users\lab_services_student\Downloads\Hackathon-Project-main\welcome background pic.webp"
+             Title="Welcome!">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+            <!-- Logo or Image -->
+            <Image Source="https://wallpaperaccess.com/full/3214373.jpg" 
+                   HeightRequest="200" 
+                   HorizontalOptions="Center" />
+
+            <!-- Welcome Message -->
+            <Label Text="Welcome To ForensiX" 
+                   FontSize="50" 
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" />
+
+            <!-- Description -->
+            <Label Text="Explore features, view reports, and get insights on real-time events."
+                   FontSize="28"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center" />
+
+            <!-- Navigation Button -->
+            <Button Text="Go to Report Page" 
+                    FontSize="18"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    Padding="15"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Clicked="ToReportPageClicked" />
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

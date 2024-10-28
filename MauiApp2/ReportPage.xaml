@@ -1,0 +1,131 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.ReportPage"
+             BackgroundColor="#f2f2f2"
+             Title="Detailed Surveillance Report">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Header Card -->
+            <Frame BackgroundColor="Red"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   Padding="20">
+                <Label Text="Surveillance Report"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       HorizontalOptions="Center" />
+            </Frame>
+
+            <!-- Image Card with Capture Metadata -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   Padding="20">
+                <Grid ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Capture Metadata -->
+                    <StackLayout Grid.Column="0" Spacing="8">
+                        <Label Text="Capture Metadata"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               TextColor="#555555" />
+                        <Label FontSize="18"
+                               TextColor="#666666"
+                               Text="Capture Time:2024-10-26 10:15 AM" />
+                        <Label FontSize="18"
+                               TextColor="#666666"
+                               Text="Location: Urban Plaza near Main Entrance and Underpass" />
+                    </StackLayout>
+
+                    <!-- Image Display in Top-Right Corner -->
+                    <Image Grid.Column="1"
+                           Source="C:\Users\lab_services_student\OneDrive\Documents\The suspicious picture example.webp"
+                           HeightRequest="150"
+                           WidthRequest="250"
+                           Aspect="AspectFill"
+                           BackgroundColor="#f0f0f0"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <!-- Detailed Description Card -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   Padding="20">
+                <StackLayout Spacing="10">
+                    <Label Text="Detailed Description"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#555555" />
+
+                    <Label FontSize="16"
+                           TextColor="#333333"
+                           LineBreakMode="WordWrap">
+                        <Label.Text>
+                            At approximately 10:15 AM, I observed two individuals engaging in suspicious behavior at the Urban Plaza near the main underpass.
+                            A man in a pink sweatshirt and blue jeans appeared to be running rapidly across the plaza, closely followed by a second individual dressed in darker
+                            clothing.
+                            Their actions suggest a potential chase or pursuit, as both individuals were moving in an unusually hurried manner in an otherwise calm, open area.
+
+                            Most other pedestrians in the vicinity were stationary or moving at a normal walking pace, making the rapid movement of these two individuals stand out.
+                            The second individual’s body language indicates they may be focused on the first individual, possibly intending to confront or catch up with them.
+
+                            Given the unusual nature of their activity and the lack of security presence in the area, 
+                            I recommend reviewing available surveillance footage from surrounding cameras to clarify the intent behind this behavior.
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Grid>
+        <Button Text="Go Back" 
+         FontSize="18"
+         BackgroundColor="Blue"
+         TextColor="White"
+         Padding="15"
+         Grid.Row="1"
+         VerticalOptions="Start"
+         CornerRadius="10"
+         HorizontalOptions="Start"
+         WidthRequest="200"
+         Clicked="BackToWelcomePage" />
+                
+        <Button Text="Save Report" 
+        FontSize="18"
+        VerticalOptions="Center"
+        BackgroundColor="Red"
+        TextColor="White"
+        Grid.Row="1"
+        Padding="15"
+        CornerRadius="10"
+        HorizontalOptions="Center"
+        WidthRequest="200"
+        Clicked="ProcessReport" />
+
+      
+
+        <Button Text="Notify All Authorities" 
+        FontSize="18"
+        BackgroundColor="Green"
+        TextColor="White"
+        Padding="15"
+        Grid.Row="1"
+        VerticalOptions="End"
+        CornerRadius="10"
+        HorizontalOptions="End"
+        WidthRequest="200"
+        Clicked="NotifyAllAuthorities" />
+           
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
